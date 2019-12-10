@@ -1,0 +1,47 @@
+
+Showing logs for build [32mksokolik-jxdemojhofficegradleui-q5w8z-2[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-6x9tq[0m
+{"level":"warn","ts":1575951882.639169,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1575951882.6398675,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mksokolik-jxdemojhofficegradleui-q5w8z-2[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-25h8c[0m
+{"level":"warn","ts":1575951883.4533806,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1575951883.4543374,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+
+Showing logs for build [32mksokolik-jxdemojhofficegradleui-q5w8z-2[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mksokolik-jxdemojhofficegradleui-q5w8z-2[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-ksokolik-jxdemojhofficegradleui-xd8mc[0m
+{"level":"warn","ts":1575951898.6445622,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1575951901.4812438,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/********/**demojhofficegradleui.git @ v0.0.3 in path /workspace/source"}
+
+Showing logs for build [32mksokolik-jxdemojhofficegradleui-q5w8z-2[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:c27f8d5f5d0e5fa42bd28b1ac85274e2e936094e
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mksokolik-jxdemojhofficegradleui-q5w8z-2[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /builder/home/git/credentials
+
+Showing logs for build [32mksokolik-jxdemojhofficegradleui-q5w8z-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-gradle-build[0m
+Starting a Gradle Daemon (subsequent builds will be faster)
+Exception caught during execution of command '[git, config, --system, --edit]' in '/usr/local/git/bin', return code '128', error message 'fatal: Invalid path '/usr/local/git/etc': No such file or directory
+'
+> Task :clean UP-TO-DATE
+> Task :bootBuildInfo
+> Task :nodeSetup SKIPPED
+> Task :npmSetup SKIPPED
+> Task :npmInstall FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':npmInstall'.
+> A problem occurred starting process 'command 'npm''
+
+* Try:
+Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output. Run with --scan to get full insights.
+
+* Get more help at https://help.gradle.org
+
+BUILD FAILED in 1m 37s
+3 actionable tasks: 2 executed, 1 up-to-date
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-build-gradle-build'. The execution of the pipeline has stopped.[0m
