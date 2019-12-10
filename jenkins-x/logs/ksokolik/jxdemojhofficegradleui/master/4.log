@@ -1,0 +1,90 @@
+
+Showing logs for build [32mmeta-ksokolik-jxdemojhofficegra-299l9-4[0m stage [32mmeta-pipeline[0m and container [32mstep-credential-initializer-297p5[0m
+{"level":"warn","ts":1575967066.990525,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1575967066.990997,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mmeta-ksokolik-jxdemojhofficegra-299l9-4[0m stage [32mmeta-pipeline[0m and container [32mstep-working-dir-initializer-7qf4m[0m
+{"level":"warn","ts":1575967068.2019026,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1575967068.2027578,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+
+Showing logs for build [32mmeta-ksokolik-jxdemojhofficegra-299l9-4[0m stage [32mmeta-pipeline[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mmeta-ksokolik-jxdemojhofficegra-299l9-4[0m stage [32mmeta-pipeline[0m and container [32mstep-git-source-meta-ksokolik-jxdemojhofficegra-2cc56[0m
+{"level":"warn","ts":1575967076.2167246,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1575967078.0792563,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/********/**demojhofficegradleui.git @ 0c33bd87b45630270478e1aa2c6e179639a997da in path /workspace/source"}
+
+Showing logs for build [32mmeta-ksokolik-jxdemojhofficegra-299l9-4[0m stage [32mmeta-pipeline[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:0c33bd87b45630270478e1aa2c6e179639a997da
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mmeta-ksokolik-jxdemojhofficegra-299l9-4[0m stage [32mmeta-pipeline[0m and container [32mstep-merge-pull-refs[0m
+SKIP merge-pull-refs: Nothing to merge
+
+Showing logs for build [32mmeta-ksokolik-jxdemojhofficegra-299l9-4[0m stage [32mmeta-pipeline[0m and container [32mstep-create-effective-pipeline[0m
+Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.**/jenkins-x-versions
+Effective pipeline written to jenkins-x-release-effective.yml
+
+Showing logs for build [32mmeta-ksokolik-jxdemojhofficegra-299l9-4[0m stage [32mmeta-pipeline[0m and container [32mstep-create-tekton-crds[0m
+? A local Jenkins X versions repository already exists, pulling the latest: Yes
+running command: echo \$(**-release-version) > VERSION
+
+running command: ** step tag --version \$(cat VERSION)
+Updating chart version in charts/**demojhofficegradleui/Chart.yaml to 0.0.4
+Updating repository in charts/**demojhofficegradleui/values.yaml to 10.105.43.44:5000/********/**demojhofficegradleui
+Updating tag in charts/**demojhofficegradleui/values.yaml to 0.0.4
+error: Have you set up a git credential helper? See https://help.github.com/articles/caching-your-github-password-in-git/
+: git output: To https://github.com/********/**demojhofficegradleui.git
+ ! [rejected]        v0.0.4 -> v0.0.4 (already exists)
+error: failed to push some refs to 'https://github.com/********/**demojhofficegradleui.git'
+hint: Updates were rejected because the tag already exists in the remote.: failed to run 'git push origin v0.0.4' command in directory '', output: 'To https://github.com/********/**demojhofficegradleui.git
+ ! [rejected]        v0.0.4 -> v0.0.4 (already exists)
+error: failed to push some refs to 'https://github.com/********/**demojhofficegradleui.git'
+hint: Updates were rejected because the tag already exists in the remote.'
+error: failed to set the version on release pipelines: failed to run '/bin/sh -c ** step tag --version $(cat VERSION)' command in directory '/workspace/source', output: ''
+[31m
+Pipeline failed on stage 'meta-pipeline' : container 'step-create-tekton-crds'. The execution of the pipeline has stopped.[0m
+
+Showing logs for build [32mmeta-ksokolik-jxdemojhofficegra-299l9-4[0m stage [32mmeta-pipeline[0m and container [32mstep-credential-initializer-297p5[0m
+{"level":"warn","ts":1575967066.990525,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1575967066.990997,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mmeta-ksokolik-jxdemojhofficegra-299l9-4[0m stage [32mmeta-pipeline[0m and container [32mstep-working-dir-initializer-7qf4m[0m
+{"level":"warn","ts":1575967068.2019026,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1575967068.2027578,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+
+Showing logs for build [32mmeta-ksokolik-jxdemojhofficegra-299l9-4[0m stage [32mmeta-pipeline[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mmeta-ksokolik-jxdemojhofficegra-299l9-4[0m stage [32mmeta-pipeline[0m and container [32mstep-git-source-meta-ksokolik-jxdemojhofficegra-2cc56[0m
+{"level":"warn","ts":1575967076.2167246,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1575967078.0792563,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/********/**demojhofficegradleui.git @ 0c33bd87b45630270478e1aa2c6e179639a997da in path /workspace/source"}
+
+Showing logs for build [32mmeta-ksokolik-jxdemojhofficegra-299l9-4[0m stage [32mmeta-pipeline[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:0c33bd87b45630270478e1aa2c6e179639a997da
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mmeta-ksokolik-jxdemojhofficegra-299l9-4[0m stage [32mmeta-pipeline[0m and container [32mstep-merge-pull-refs[0m
+SKIP merge-pull-refs: Nothing to merge
+
+Showing logs for build [32mmeta-ksokolik-jxdemojhofficegra-299l9-4[0m stage [32mmeta-pipeline[0m and container [32mstep-create-effective-pipeline[0m
+Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.**/jenkins-x-versions
+Effective pipeline written to jenkins-x-release-effective.yml
+
+Showing logs for build [32mmeta-ksokolik-jxdemojhofficegra-299l9-4[0m stage [32mmeta-pipeline[0m and container [32mstep-create-tekton-crds[0m
+? A local Jenkins X versions repository already exists, pulling the latest: Yes
+running command: echo \$(**-release-version) > VERSION
+
+running command: ** step tag --version \$(cat VERSION)
+Updating chart version in charts/**demojhofficegradleui/Chart.yaml to 0.0.4
+Updating repository in charts/**demojhofficegradleui/values.yaml to 10.105.43.44:5000/********/**demojhofficegradleui
+Updating tag in charts/**demojhofficegradleui/values.yaml to 0.0.4
+error: Have you set up a git credential helper? See https://help.github.com/articles/caching-your-github-password-in-git/
+: git output: To https://github.com/********/**demojhofficegradleui.git
+ ! [rejected]        v0.0.4 -> v0.0.4 (already exists)
+error: failed to push some refs to 'https://github.com/********/**demojhofficegradleui.git'
+hint: Updates were rejected because the tag already exists in the remote.: failed to run 'git push origin v0.0.4' command in directory '', output: 'To https://github.com/********/**demojhofficegradleui.git
+ ! [rejected]        v0.0.4 -> v0.0.4 (already exists)
+error: failed to push some refs to 'https://github.com/********/**demojhofficegradleui.git'
+hint: Updates were rejected because the tag already exists in the remote.'
+error: failed to set the version on release pipelines: failed to run '/bin/sh -c ** step tag --version $(cat VERSION)' command in directory '/workspace/source', output: ''
+[31m
+Pipeline failed on stage 'meta-pipeline' : container 'step-create-tekton-crds'. The execution of the pipeline has stopped.[0m
