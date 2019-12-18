@@ -28,6 +28,11 @@ spec:
         - name: {{ $pkey }}
           value: {{ quote $pval }}
 {{- end }}
+        - name: JHIPSTER_SECURITY_AUTHENTICATION_JWT_BASE64_SECRET
+          valueFrom:
+              secretKeyRef:
+                  name: jwt-secret
+                  key: secret
         ports:
         - containerPort: {{ .Values.service.internalPort }}
         livenessProbe:
